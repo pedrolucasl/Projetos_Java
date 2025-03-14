@@ -32,4 +32,16 @@ public class Usuario {
             System.out.println("O livro: " + livro.getTitulo() + "não está mais disponível"); //SE NÃO ESTIVER DISPONÍEÇ "TRUE"
         }
     }
+
+    public void devolverLivro (){
+
+        if (livroAlugado != null){ //VAI VERIFICAR A A CONDIÇÃO DO LIVRO
+        livroAlugado.setDisponivel(true); //DEVOLVEU O LIVRO E AGORA "SETOU" UM TRUE, POIS, COMO O LIVRO FOI DEVOLVIDO, VOLTOU A SER DISPONÍVEL
+            System.out.println(nome+ "devolveu o livro: "+livroAlugado.getTitulo());
+            livroAlugado = null; //RESETOU A INFORMAÇÃO
+        } else {
+            System.out.println(nome+ " não tem o livro para devolver");
+        }
+    }
+
 }
